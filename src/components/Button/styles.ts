@@ -4,7 +4,7 @@ import { ButtonProps } from '.'
 export const ButtonWrapper = styled.button.attrs({
   'data-testid': 'ButtonWrapper'
 })<ButtonProps>`
-  ${({ theme, disabled }) => css`
+  ${({ theme, disabled, isFilter }) => css`
     background-color: ${theme.colors.tomato};
     color: ${theme.colors.white};
     font-family: ${theme.font.family};
@@ -30,6 +30,10 @@ export const ButtonWrapper = styled.button.attrs({
     ${disabled && css`
       cursor: not-allowed;
       opacity: 0.7;   
+    `}
+
+    ${isFilter && css`
+      padding: 10px 70px;
     `}
   `}
 `
