@@ -1,5 +1,6 @@
 import styled, { css } from 'styled-components'
 import { RiMoneyDollarCircleLine } from 'react-icons/ri'
+import { AiOutlineCloseCircle } from 'react-icons/ai'
 
 export const Wrapper = styled.div.attrs({
   'data-testid': 'WrapperCard'
@@ -25,12 +26,34 @@ export const Wrapper = styled.div.attrs({
 `
 
 export const Header = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  width: 100%;
+  padding: 0 10px;
 `
 
 export const Title = styled.h3`
   ${({ theme }) => css`
     font-family: ${theme.font.family};
     color: ${theme.colors.black};
+    display: flex;
+    align-items: flex-start;
+  `}
+`
+
+
+export const CloseIcon = styled(AiOutlineCloseCircle)`
+  ${({ theme }) => css`
+    font-family: ${theme.font.family};
+    color: ${theme.colors.black};
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+
+    font-size: 20px;
+    cursor: pointer;
   `}
 `
 
