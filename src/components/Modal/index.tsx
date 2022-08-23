@@ -16,6 +16,9 @@ export default function Modal({ title, children, isOpen, getValueOpen }: ModalPr
       <S.Wrapper>
         <S.Header>
           <S.Title>{title}</S.Title>
+          <S.CloseIcon onClick={() => {
+            setIsModalOpen(!isModalOpen)
+          }}/>
         </S.Header>
         <S.Content>
           {children}
