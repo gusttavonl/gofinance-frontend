@@ -16,7 +16,7 @@ const CategoriesReceivement = () => {
         <ListCategories openModal={getValueOpen} />
       </S.Wrapper>
       <S.ModalArea>
-       <CategoriesReceivementAdd getValueOpen={getValueOpen} isOpen={modalIsOpen}/>
+        <CategoriesReceivementAdd getValueOpen={getValueOpen} isOpen={modalIsOpen}/>
       </S.ModalArea>
       </>
   )

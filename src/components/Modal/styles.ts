@@ -5,8 +5,8 @@ import { AiOutlineCloseCircle } from 'react-icons/ai'
 export const Wrapper = styled.div.attrs({
   'data-testid': 'WrapperCard'
 })`
-  height: 50vh;
-  width: 60vw;
+  height: 100%;
+  width: 70vw;
 
   ${({ theme }) => css`
     background: ${theme.colors.white};
@@ -31,7 +31,7 @@ export const Header = styled.div`
   justify-content: space-between;
 
   width: 100%;
-  padding: 0 10px;
+  padding: 10px 10px;
 `
 
 export const Title = styled.h3`
