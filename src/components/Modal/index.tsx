@@ -21,20 +21,20 @@ export default function Modal({ title, children, isOpen, getValueOpen }: ModalPr
   }, [isOpen])
   return (
     <>
-    {isModalOpen && (
-      <S.Wrapper>
-        <S.Header>
-          <S.Title>{title}</S.Title>
-          <S.CloseIcon onClick={() => {
-            setIsModalOpen(!isModalOpen)
-            getValueOpen(!isModalOpen)
-          }}/>
-        </S.Header>
-        <S.Content>
-          {children}
-        </S.Content>
-      </S.Wrapper>
-    )}
+      {isModalOpen && (
+        <S.Wrapper>
+          <S.Header>
+            <S.Title>{title}</S.Title>
+            <S.CloseIcon onClick={() => {
+              setIsModalOpen(!isModalOpen)
+              getValueOpen(!isModalOpen)
+            }}/>
+          </S.Header>
+          <S.Content>
+            {children}
+          </S.Content>
+        </S.Wrapper>
+      )}
     </>
   )
 }
