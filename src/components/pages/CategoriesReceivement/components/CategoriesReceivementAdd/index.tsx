@@ -10,7 +10,7 @@ export type CategoriesReceivementAddProps = {
 const CategoriesReceivementAdd = ({ isOpen, getValueOpen }: CategoriesReceivementAddProps) => {
   return (
     <Modal 
-      title="Adicionar novo recebimento"
+      title="Adicionar nova categoria de recebimento"
       isOpen={isOpen}
       getValueOpen={getValueOpen}
     >
