@@ -10,6 +10,10 @@ import * as S from './styles'
 import Button from '@/components/Button'
 import Input from '@/components/Input' 
 
+export type ListDefaultProps = {
+  openModal: (value: boolean) => void
+}
+
 function createData(
   title: string,
   description: number,
@@ -26,11 +30,11 @@ const rows = [
   createData('Frozen yoghurt', 159, 6.0, 24, 4.0),
 ]
 
-export default function ListAccunts() {
+export default function ListAccunts({ openModal }: ListDefaultProps) {
   return (
     <S.Wrapper>
       <S.Button>
-        <Button isFilter >
+        <Button isFilter onClick={() => openModal(true)}>
           Adicionar
         </Button>
       </S.Button>
